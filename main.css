@@ -6,6 +6,9 @@ body{
     transition: ease-in 0.3s;
     color: #000000;
 }
+#option-but{
+    margin: 5px 0px;
+}
 table thead th{
     text-align: left;
     font-weight: bold;
@@ -87,4 +90,7 @@ input[type = "checkbox"]:checked ~ .check:after{
     border-radius: 50%;
     transition: 0.3s;
     transform: translateX(50px);
+}
+#NTNN{
+    display: none;
 }

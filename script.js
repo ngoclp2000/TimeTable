@@ -28,11 +28,14 @@ function changeBackgroundTable(){
         element.style.background = backgroundColorRule;
     })
 }
+
+
 window.onload = ()=>{
     let stringScreenSize = screen.width.toString() +"px";
     document.querySelector('.content-table').style.minWidth = stringScreenSize ;
     console.log(stringScreenSize);
     let checkbox = document.querySelector('input[type = "checkbox"]');
+    let tableOption = document.getElementById('table-option');
     addClickElementTable();
     checkbox.addEventListener('change',e =>{
         let check = document.querySelector('.check');
@@ -50,4 +53,14 @@ window.onload = ()=>{
             changeBackgroundTable();
         }
     })
+
+    tableOption.addEventListener('change', e =>{
+        if(e.target.value == 'TBN'){
+            document.getElementById('NTNN').style.display = "none";
+            document.getElementById('TBN').style.display = "block";
+        }else if(e.target.value == 'NTNN'){
+            document.getElementById('TBN').style.display = "none";
+            document.getElementById('NTNN').style.display = "block";
+        }
+    },false)
 }

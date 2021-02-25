@@ -103,6 +103,19 @@ input[type = "checkbox"]:checked ~ .check:after{
 #NTNN{
     display: none;
 }
+.light-mode{
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.dark-mode{
+    background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
 </style>
 <body>
     <div class="center-div" id="option-but">
@@ -113,7 +126,7 @@ input[type = "checkbox"]:checked ~ .check:after{
         </select>
     </div>
     <table class="content-table" id="TBN">
-        <thead>
+        <thead class="active light-mode">
             <tr>
                 <th>Tiết</th>
                 <th>Thứ 2</th>
@@ -126,77 +139,77 @@ input[type = "checkbox"]:checked ~ .check:after{
         
         <tbody>
             <tr class=".rows">
-                <td>6h45-7h30</td>
+                <td class="active light-mode">6h45-7h30</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td rowspan="2">Object-Oriented Language and Theory (Java) (122151 D9-406)</td>
+                <td rowspan="2" class="active light-mode">Object-Oriented Language and Theory (Java) (122151 D9-406)</td>
             </tr>
             <tr class=".rows">
-                <td>7h30-8h15</td>
+                <td class="active light-mode">7h30-8h15</td>
                 <td></td>
                 <td></td>
-                <td rowspan="2">Computer Architecture(122161 D9-407)</td>
+                <td rowspan="2" class="active light-mode">Computer Architecture(122161 D9-407)</td>
                 <td></td>
             </tr>
             <tr class=".rows">
-                <td>8h25-9h10</td>
+                <td class="active light-mode">8h25-9h10</td>
                 <td></td>
-                <td rowspan="2">Database(122167 D9-407)</td>
-                <td rowspan="4">Assembly Language and Computer Architecture Lab(122157 D5-305)</td>
-                <td rowspan="4">Database Lab (122163 B1-302)</td>
+                <td rowspan="2" class="active light-mode">Database(122167 D9-407)</td>
+                <td rowspan="4" class="active light-mode">Assembly Language and Computer Architecture Lab(122157 D5-305)</td>
+                <td rowspan="4" class="active light-mode">Database Lab (122163 B1-302)</td>
             </t><tr class=".rows">
-                <td>9h20-10h05</td>
-                <td>Software Engineering(122150 D9-506)</td>
+                <td class="active light-mode">9h20-10h05</td>
+                <td class="active light-mode">Software Engineering(122150 D9-506)</td>
                 <td></td>
             </tr><tr class=".rows">
-                <td>10h15-11h</td>
+                <td class="active light-mode">10h15-11h</td>
                 <td></td>
-                <td rowspan="2">ComputerNetWork(122147 D9-407)</td>
-                <td rowspan="2">Operating Systems</td>
+                <td class="active light-mode" rowspan="2">ComputerNetWork(122147 D9-407)</td>
+                <td  class="active light-mode" rowspan="2">Operating Systems</td>
             </tr><tr class=".rows">
-                <td>11h-11h45</td>
-                <td></td>
-            </tr><tr class=".rows">
-                <td>12h30-13h15</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td rowspan="2">Object-Oriented Language and Theory (Java) Lab (122152 D5-302)</td>
-            </tr><tr class=".rows">
-                <td>13h15-14h</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="active light-mode">11h-11h45</td>
                 <td></td>
             </tr><tr class=".rows">
-                <td>14h10-14h55</td>
+                <td class="active light-mode">12h30-13h15</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="active light-mode" rowspan="2">Object-Oriented Language and Theory (Java) Lab (122152 D5-302)</td>
+            </tr><tr class=".rows">
+                <td class="active light-mode">13h15-14h</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr><tr class=".rows">
-                <td>15h05-15h50</td>
+                <td class="active light-mode">14h10-14h55</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr><tr class=".rows">
-                <td>16h-16h45</td>
+                <td class="active light-mode">15h05-15h50</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr><tr class=".rows">
-                <td>16h45-17h30</td>
+                <td class="active light-mode">16h-16h45</td>
                 <td></td>
-                <td>Web Information System (122132 D9-401)</td>
-                <td>Multimedia Communication (122134 D9-501)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr class=".rows">
+                <td class="active light-mode">16h45-17h30</td>
+                <td></td>
+                <td class="active light-mode">Web Information System (122132 D9-401)</td>
+                <td class="active light-mode">Multimedia Communication (122134 D9-501)</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -204,7 +217,7 @@ input[type = "checkbox"]:checked ~ .check:after{
     </table>
 
     <table class="content-table" id="NTNN">
-        <thead>
+        <thead class="active light-mode">
             <tr>
                 <th>Tiết</th>
                 <th>Thứ 2</th>
@@ -217,66 +230,66 @@ input[type = "checkbox"]:checked ~ .check:after{
         
         <tbody>
             <tr class=".rows">
-                <td>6h45-7h30</td>
+                <td class="active light-mode">6h45-7h30</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td rowspan="4">Cơ học lượng tử (125030 D5-404 22,25-31,33-40)</td>
+                <td class="active light-mode" rowspan="4">Cơ học lượng tử (125030 D5-404 22,25-31,33-40)</td>
             </tr>
             <tr class=".rows">
-                <td>7h30-8h15</td>
+                <td class="active light-mode">7h30-8h15</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr class=".rows">
-                <td>8h25-9h10</td>
+                <td class="active light-mode">8h25-9h10</td>
                 <td></td>
-                <td rowspan="4">Vật lý và linh kiện bán dẫn(TN 706136 C9-108 29,30,31 <u>8h-11h30</u>)</td>
+                <td class="active light-mode" rowspan="4">Vật lý và linh kiện bán dẫn(TN 706136 C9-108 29,30,31 <u>8h-11h30</u>)</td>
                 <td ></td>
-                <td rowspan="4">Hệ thống nhúng và ứng dụng(TN 706142 C10-408 34,35,36 <u>8h-11h30</u>)</td>
+                <td class="active light-mode" rowspan="4">Hệ thống nhúng và ứng dụng(TN 706142 C10-408 34,35,36 <u>8h-11h30</u>)</td>
             </tr><tr class=".rows">
-                <td>9h20-10h05</td>
-                <td rowspan="3">Căn bản khoa học máy tính cho kỹ sư vật lý(125033 D5-403 22,25-31,33-40)</td>
+                <td class="active light-mode">9h20-10h05</td>
+                <td class="active light-mode" rowspan="3">Căn bản khoa học máy tính cho kỹ sư vật lý(125033 D5-403 22,25-31,33-40)</td>
                 <td></td>
             </tr><tr class=".rows">
-                <td>10h15-11h</td>
-                <td></td>
-                <td></td>
-            </tr><tr class=".rows">
-                <td>11h-11h45</td>
+                <td class="active light-mode">10h15-11h</td>
                 <td></td>
                 <td></td>
             </tr><tr class=".rows">
-                <td>12h30-13h15</td>
-                <td></td>
-                <td rowspan="2">Giải tích II (LT 123749	D3-201 28-43) </td>
-                <td></td>
-                <td></td>
-                <td rowspan="3">Vật lý và linh kiện bán dẫn(125043 D5-202 22,25-31,33-40)</td>
-            </tr><tr class=".rows">
-                <td>13h15-14h</td>
-                <td></td>
-                <td rowspan="5">Căn bản khoa học máy tính cho kỹ sư vật lý(TN 706119 C10-408 34,35,36 <u>13h-17h</u>)</td>
-                <td></td>
-            </tr><tr class=".rows">
-                <td>14h10-14h55</td>
-                <td rowspan="4">Vật lý thống kê(125047 D7-402 22,25-31,33-40)</td>
+                <td class="active light-mode">11h-11h45</td>
                 <td></td>
                 <td></td>
             </tr><tr class=".rows">
-                <td>15h05-15h50</td>
+                <td class="active light-mode">12h30-13h15</td>
+                <td></td>
+                <td class="active light-mode" rowspan="2">Giải tích II (LT 123749	D3-201 28-43) </td>
                 <td></td>
                 <td></td>
-                <td rowspan="3">Hệ thống nhúng và ứng dụng(125045 D5-202 22,25-31,33-40)</td>
+                <td class="active light-mode" rowspan="3">Vật lý và linh kiện bán dẫn(125043 D5-202 22,25-31,33-40)</td>
             </tr><tr class=".rows">
-                <td>16h-16h45</td>
+                <td class="active light-mode">13h15-14h</td>
                 <td></td>
-                <td rowspan="2">Giải tích II(123751 D5-104 28-43)</td>
+                <td class="active light-mode" rowspan="5">Căn bản khoa học máy tính cho kỹ sư vật lý(TN 706119 C10-408 34,35,36 <u>13h-17h</u>)</td>
+                <td></td>
             </tr><tr class=".rows">
-                <td>16h45-17h30</td>
+                <td class="active light-mode">14h10-14h55</td>
+                <td class="active light-mode" rowspan="4">Vật lý thống kê(125047 D7-402 22,25-31,33-40)</td>
+                <td></td>
+                <td></td>
+            </tr><tr class=".rows">
+                <td class="active light-mode">15h05-15h50</td>
+                <td></td>
+                <td></td>
+                <td class="active light-mode" rowspan="3">Hệ thống nhúng và ứng dụng(125045 D5-202 22,25-31,33-40)</td>
+            </tr><tr class=".rows">
+                <td class="active light-mode">16h-16h45</td>
+                <td></td>
+                <td class="active light-mode" rowspan="2">Giải tích II(123751 D5-104 28-43)</td>
+            </tr><tr class=".rows">
+                <td class="active light-mode">16h45-17h30</td>
                 <td></td>
             </tr>
         </tbody>
@@ -304,11 +317,11 @@ function addClickElementTable(){
     let tds = document.querySelectorAll('.content-table td');
     tds.forEach(element => {
         element.addEventListener('click', e =>{
-            if(e.target.classList.contains('active-row')){
-                e.target.classList.remove('active-row');
+            if(e.target.classList.contains('active light-mode-row')){
+                e.target.classList.remove('active light-mode-row');
                 e.target.style.background = backgroundColorRule;
             }else{
-                e.target.classList.add('active-row');
+                e.target.classList.add('active light-mode-row');
                 e.target.style.background = getRandomColor();
             }
         })
@@ -320,6 +333,18 @@ function changeBackgroundTable(){
         element.style.background = backgroundColorRule;
     })
 }
+function changeBackgroundActive(){
+    let activeCells = document.querySelectorAll('table .active');
+    activeCells.forEach(element => {
+        if(element.classList.contains('light-mode')){
+            element.classList.remove('light-mode');
+            element.classList.add('dark-mode');
+        }else{
+            element.classList.remove('dark-mode');
+            element.classList.add('light-mode');
+        }
+    });
+}
 
 
 window.onload = ()=>{
@@ -328,7 +353,6 @@ window.onload = ()=>{
     console.log(stringScreenSize);
     let checkbox = document.querySelector('input[type = "checkbox"]');
     let tableOption = document.getElementById('table-option');
-    addClickElementTable();
     checkbox.addEventListener('change',e =>{
         let check = document.querySelector('.check');
         if(e.target.checked){
@@ -336,13 +360,13 @@ window.onload = ()=>{
             document.body.style.background = "#292929";
             document.body.style.color = "#fff";
             backgroundColorRule = "#292929";
-            changeBackgroundTable();
+            changeBackgroundActive();
         }else{
             check.style.background = "#092c3e";
             document.body.style.background = "#fff";
             document.body.style.color = "#292929";
             backgroundColorRule = "#fff";
-            changeBackgroundTable();
+            changeBackgroundActive();
         }
     })
 

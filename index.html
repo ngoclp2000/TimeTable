@@ -5,12 +5,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/image/icon.png">
-    <link rel="stylesheet" href="main.css">
-    <script src="script.js"></script>
     <title>Time Table</title>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    transition: ease-in 0.3s;
+    color: #000000;
+}
+#option-but{
+    margin: 5px 0px;
+}
+table thead th{
+    text-align: left;
+    font-weight: bold;
+}
+.content-table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    column-rule: #000000 1px;
+}
+
+.content-table th,.content-table td{
+    padding: 12px 15px;
+    border: 0.5px solid #000000;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: ease-in 0.2s;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+  
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #000000;
+}
+.active-row {
+}
+.center-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type = "checkbox"]{
+    -webkit-appearance: none;
+}
+.check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #292929;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.3s;
+}
+input[type = "checkbox"]:checked ~ .check:before{
+    transform: translateX(-50px);
+}
+.check:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-color: #fff;
+    width:16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+input[type = "checkbox"]:checked ~ .check:after{
+    transform: translateX(20px);
+}
+.check:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-color: #292929;
+    width:16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.3s;
+    transform: translateX(50px);
+}
+#NTNN{
+    display: none;
+}
 </style>
 <body>
     <div class="center-div" id="option-but">
@@ -197,5 +290,74 @@
             </span>
         </label>
     </div>
+    <script>
+        var backgroundColorRule = "#fff";
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+function addClickElementTable(){
+    let tds = document.querySelectorAll('.content-table td');
+    tds.forEach(element => {
+        element.addEventListener('click', e =>{
+            if(e.target.classList.contains('active-row')){
+                e.target.classList.remove('active-row');
+                e.target.style.background = backgroundColorRule;
+            }else{
+                e.target.classList.add('active-row');
+                e.target.style.background = getRandomColor();
+            }
+        })
+    });
+}
+function changeBackgroundTable(){
+    let tds = document.querySelectorAll('.content-table td');
+    tds.forEach(element =>{
+        element.style.background = backgroundColorRule;
+    })
+}
+
+
+window.onload = ()=>{
+    let stringScreenSize = screen.width.toString() +"px";
+    document.querySelector('.content-table').style.minWidth = stringScreenSize ;
+    console.log(stringScreenSize);
+    let checkbox = document.querySelector('input[type = "checkbox"]');
+    let tableOption = document.getElementById('table-option');
+    addClickElementTable();
+    checkbox.addEventListener('change',e =>{
+        let check = document.querySelector('.check');
+        if(e.target.checked){
+            check.style.background = "#fff";
+            document.body.style.background = "#292929";
+            document.body.style.color = "#fff";
+            backgroundColorRule = "#292929";
+            changeBackgroundTable();
+        }else{
+            check.style.background = "#092c3e";
+            document.body.style.background = "#fff";
+            document.body.style.color = "#292929";
+            backgroundColorRule = "#fff";
+            changeBackgroundTable();
+        }
+    })
+
+    tableOption.addEventListener('change', e =>{
+        if(e.target.value == 'TBN'){
+            document.getElementById('NTNN').style.display = "none";
+            document.getElementById('TBN').style.display = "block";
+        }else if(e.target.value == 'NTNN'){
+            document.getElementById('TBN').style.display = "none";
+            document.getElementById('NTNN').style.display = "block";
+        }
+    },false)
+}
+
+    </script>
 </body>
 </html>
